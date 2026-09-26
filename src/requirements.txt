@@ -1,0 +1,3 @@
+Java JDK 17 or higher
+Visual Studio Code (optional)
+Extension Pack for Java (optional)
