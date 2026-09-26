@@ -17,3 +17,5 @@ The system manages employee details and calculates salaries for:
 Gross Salary = Basic Salary + Bonus
 Tax = Gross Salary × 10%
 Net Salary = Gross Salary - Tax
+
+[![View Architecture Diagram](https://img.shields.io/badge/View-Architecture_Diagram-blue)](https://gitdiagram.com/vikasachar27-jpg/employee_payroll_system)
