@@ -40,4 +40,13 @@ public class FullTimeEmployee extends Employee {
 
         return netSalary;
     }
+
+    @Override
+    public String toString() {
+
+        return super.toString()
+                + " | Type: Full-Time"
+                + " | Basic Salary: " + basicSalary
+                + " | Bonus: " + bonus;
+    }
 }

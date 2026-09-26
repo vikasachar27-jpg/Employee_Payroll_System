@@ -82,32 +82,23 @@ public class PayrollService {
 
             Employee employee = employees[i];
 
+            // Interface reference
+            Payable payable = employee;
+
+            // Dynamic binding through the interface reference
+            double netSalary = payable.calculateSalary();
+
+            // Type casting: double to int
+            int wholeRupees = (int) netSalary;
+
             System.out.printf(
-                    "ID: %s | Name: %s | Department: %s | Net Salary: %.2f%n",
+                    "ID: %s | Name: %s | Department: %s | Net Salary: %.2f | Whole Rupees: %d%n",
                     employee.getEmployeeId(),
                     employee.getName(),
                     employee.getDepartment(),
-                    employee.calculateSalary()
+                    netSalary,
+                    wholeRupees
             );
         }
-    }
-
-    // Demonstrates interface reference
-    public double calculateThroughInterface(Employee employee) {
-
-        Payable payable = employee;
-
-        return payable.calculateSalary();
-    }
-
-    // Demonstrates explicit type casting from double to int
-    public int calculateRoundedSalary(Employee employee) {
-
-        double salary = employee.calculateSalary();
-
-        // Explicit casting: double to int
-        int roundedSalary = (int) salary;
-
-        return roundedSalary;
     }
 }
