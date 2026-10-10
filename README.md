@@ -8,11 +8,11 @@ The application supports two types of employees: Full-Time Employees and Part-Ti
 
 The main objective of this project is to combine Java programming concepts into one functional application while maintaining a clear and organized code structure.
 
-Architecture
+## Architecture
 
-""View Interactive Diagram" (https://img.shields.io/badge/View-Interactive_Architecture_Diagram-blue?style=for-the-badge)" (https://gitdiagram.com/vikasachar27-jpg/employee_payroll_system)
+[![View Interactive Diagram](https://img.shields.io/badge/View-Interactive_Architecture_Diagram-blue?style=for-the-badge)](https://gitdiagram.com/vikasachar27-jpg/employee_payroll_system)
 
-«Click the badge to explore the interactive architecture diagram of the project.»
+Click the badge to explore the interactive architecture diagram of the project.
 
 The application is organized into three custom packages: "main", "model", and "service". Each package has a specific responsibility, making the project easier to understand and maintain.
 
@@ -41,9 +41,11 @@ Full-Time Employee
 
 The salary of a full-time employee is calculated using the basic salary and bonus. A 10% tax deduction is applied to the gross salary.
 
-Gross Salary = Basic Salary + Bonus
-Tax = Gross Salary × 10%
-Net Salary = Gross Salary - Tax
+**Gross Salary** = Basic Salary + Bonus
+
+**Tax** = Gross Salary × 10%
+
+**Net Salary** = Gross Salary − Tax
 
 Example:
 
