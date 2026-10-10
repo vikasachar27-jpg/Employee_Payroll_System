@@ -12,7 +12,7 @@ The main objective of this project is to combine Java programming concepts into 
 ## Architecture
 
 [![Architecture Diagram](https://img.shields.io/badge/Architecture-Interactive_Diagram-blue)](https://gitdiagram.com/vikasachar27-jpg/employee_payroll_system) 
-*(Click the badge to explore the interactive architecture diagram of the project - update link before publishing)*
+*(Click the badge to explore the interactive architecture diagram of the project)*
 
 The application is organized into three custom packages: `main`, `model`, and `service`. Each package has a specific responsibility, making the project easier to understand and maintain.
 
