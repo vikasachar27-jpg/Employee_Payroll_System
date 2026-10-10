@@ -1,36 +1,45 @@
-Employee Payroll Management System
-About the Project
-The Employee Payroll Management System is a console-based Java application developed as part of our Java Programming coursework. The project demonstrates how Object-Oriented Programming (OOP) concepts can be applied to a practical problem involving employee management and salary calculation.
+# Employee Payroll Management System
 
-The application supports two types of employees: Full-Time Employees and Part-Time Employees. Through a menu-driven interface, users can add employee details, view all registered employees, search for an employee using their ID, generate payroll reports, and check the total number of employees created.
+## About the Project
+
+The **Employee Payroll Management System** is a console-based Java application developed as part of our Java Programming coursework. The project demonstrates how Object-Oriented Programming (OOP) concepts can be applied to a practical problem involving employee management and salary calculation.
+
+The application supports two types of employees: **Full-Time Employees** and **Part-Time Employees**. Through a menu-driven interface, users can add employee details, view all registered employees, search for an employee using their ID, generate payroll reports, and check the total number of employees created.
 
 The main objective of this project is to combine Java programming concepts into one functional application while maintaining a clear and organized code structure.
 
-Architecture
-Architecture Diagram (Click the badge to explore the interactive architecture diagram of the project)
+## Architecture
 
-The application is organized into three custom packages: main, model, and service. Each package has a specific responsibility, making the project easier to understand and maintain.
+[![Architecture Diagram](https://img.shields.io/badge/Architecture-Interactive_Diagram-blue)](https://gitdiagram.com/vikasachar27-jpg/employee_payroll_system) 
+*(Click the badge to explore the interactive architecture diagram of the project - update link before publishing)*
 
-Main package: Contains PayrollApp.java, which provides the console menu, accepts user input, and connects user actions to the payroll service.
-Model package: Contains Person, Employee, FullTimeEmployee, PartTimeEmployee, the Department enum, and the Payable interface. These classes define employee information and salary-related behavior.
-Service package: Contains PayrollService.java, which manages the employee array and provides methods for adding, displaying, searching, and processing employee payrolls.
-The abstract Employee class extends Person and implements the Payable interface. FullTimeEmployee and PartTimeEmployee extend Employee and implement their own salary calculation logic.
+The application is organized into three custom packages: `main`, `model`, and `service`. Each package has a specific responsibility, making the project easier to understand and maintain.
 
-Features
-Add Full-Time and Part-Time Employees
-Store multiple employee objects in an array
-Display employee details
-Search employees by Employee ID
-Generate payroll reports
-Display the total employee count
-Select departments using an enum
-Calculate net salary after tax deduction
-Use formatted console output for payroll details
-Navigate the application through a menu-driven interface
-How Payroll Works
-Full-Time Employee
+* **Main package:** Contains `PayrollApp.java`, which provides the console menu, accepts user input, and connects user actions to the payroll service.
+* **Model package:** Contains `Person`, `Employee`, `FullTimeEmployee`, `PartTimeEmployee`, the `Department` enum, and the `Payable` interface. These classes define employee information and salary-related behavior.
+* **Service package:** Contains `PayrollService.java`, which manages the employee array and provides methods for adding, displaying, searching, and processing employee payrolls.
+
+The abstract `Employee` class extends `Person` and implements the `Payable` interface. `FullTimeEmployee` and `PartTimeEmployee` extend `Employee` and implement their own salary calculation logic.
+
+## Features
+
+* Add Full-Time and Part-Time Employees
+* Store multiple employee objects in an array
+* Display employee details
+* Search employees by Employee ID
+* Generate payroll reports
+* Display the total employee count
+* Select departments using an enum
+* Calculate net salary after tax deduction
+* Use formatted console output for payroll details
+* Navigate the application through a menu-driven interface
+
+## How Payroll Works
+
+### Full-Time Employee
 The salary of a full-time employee is calculated using the basic salary and bonus. A 10% tax deduction is applied to the gross salary.
 
+```text
 Gross Salary = Basic Salary + Bonus 
 Tax = Gross Salary × 10% 
 Net Salary = Gross Salary - Tax 
@@ -56,7 +65,6 @@ Hourly Rate = ₹100
 Gross Salary = ₹800
 Tax = ₹80
 Net Salary = ₹720
-
 
 Object-Oriented Programming Concepts
 
@@ -96,10 +104,11 @@ Visual Studio Code or any Java-compatible IDE
 
 How to Run
 Open a terminal in the project root directory.
+
 1. Compile the Java source files
 javac -d out src/model/*.java src/service/*.java src/main/*.java 
 
-2.Run the application
+2. Run the application
 java -cp out main.PayrollApp 
 
 After launching the program, follow the menu options and enter the requested employee details.
