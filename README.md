@@ -173,6 +173,7 @@ The following screenshots demonstrate the working of the Employee Payroll Manage
 ![Payroll Report and Employee Count](payroll_report.png)
 
 
-Conclusion
+## Conclusion
+
 The Employee Payroll Management System demonstrates how Java OOP concepts can be combined to develop a simple and organized application. By separating employee models, payroll operations, and console interaction, the project provides a practical example of inheritance, abstraction, polymorphism, interfaces, and other Java features working together.
 
