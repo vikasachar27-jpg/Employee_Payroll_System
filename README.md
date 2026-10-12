@@ -37,66 +37,109 @@ The abstract `Employee` class extends `Person` and implements the `Payable` inte
 ## How Payroll Works
 
 ### Full-Time Employee
+
 The salary of a full-time employee is calculated using the basic salary and bonus. A 10% tax deduction is applied to the gross salary.
 
-```text
-Gross Salary = Basic Salary + Bonus 
-Tax = Gross Salary × 10% 
-Net Salary = Gross Salary - Tax 
+**Formulas:**
 
-Example:
-Basic Salary = ₹30,000
-Bonus = ₹5,000
-Gross Salary = ₹35,000
-Tax = ₹3,500
-Net Salary = ₹31,500
+- Gross Salary = Basic Salary + Bonus
+- Tax = Gross Salary × 10%
+- Net Salary = Gross Salary − Tax
 
-Part-Time Employee
+**Example:**
+
+| Component | Amount |
+|---|---:|
+| Basic Salary | ₹30,000 |
+| Bonus | ₹5,000 |
+| Gross Salary | ₹35,000 |
+| Tax (10%) | ₹3,500 |
+| **Net Salary** | **₹31,500** |
+
+### Part-Time Employee
 
 The salary of a part-time employee depends on the number of hours worked and the hourly rate. The same 10% tax deduction is applied to the gross salary.
 
-Gross Salary = Hours Worked × Hourly Rate 
-Tax = Gross Salary × 10% 
-Net Salary = Gross Salary - Tax 
+**Formulas:**
 
-Example:
-Hours Worked = 8
-Hourly Rate = ₹100
-Gross Salary = ₹800
-Tax = ₹80
-Net Salary = ₹720
+- Gross Salary = Hours Worked × Hourly Rate
+- Tax = Gross Salary × 10%
+- Net Salary = Gross Salary − Tax
 
-Object-Oriented Programming Concepts
+**Example:**
+
+| Component | Amount |
+|---|---:|
+| Hours Worked | 8 |
+| Hourly Rate | ₹100 |
+| Gross Salary | ₹800 |
+| Tax (10%) | ₹80 |
+| **Net Salary** | **₹720** |
+
+## Object-Oriented Programming Concepts
 
 This project demonstrates the following Java concepts:
-Encapsulation: Private fields with public getters and setters protect employee data.
-Inheritance: Employee extends Person, while FullTimeEmployee and PartTimeEmployee extend Employee.
-Abstraction: The abstract Employee class defines common employee behavior and an abstract calculateSalary() method.
-Polymorphism: Overridden salary calculation methods are selected at runtime according to the actual employee object.
-Interfaces: The Payable interface defines the common salary calculation contract.
-Method Overloading: The searchEmployee() method supports different parameter lists.
-Constructor Overloading: Person provides default and parameterized constructors.
-Method Overriding: Subclasses implement their own calculateSalary() method.
-this and super: Used to refer to the current object and access parent-class constructors or methods.
-Static and Final Members: Used for the employee counter, tax-rate constant, and final display method.
-Enum: Department restricts department selection to predefined values.
-Arrays of Objects: An Employee array stores Full-Time and Part-Time employee objects.
-Type Casting and String Methods: Demonstrated during salary processing and employee ID searching.
-Control Flow and Packages: Loops, conditional statements, jump statements, and custom packages organize the application's logic.
 
-Project Structure
-src/ 
-├── main/ 
-│   └── PayrollApp.java 
-├── model/ 
-│   ├── Person.java 
-│   ├── Employee.java 
-│   ├── FullTimeEmployee.java 
-│   ├── PartTimeEmployee.java 
-│   ├── Department.java 
-│   └── Payable.java 
-└── service/ 
-    └── PayrollService.java 
+- **Encapsulation:** Private fields with public getters and setters protect employee data.
+- **Inheritance:** `Employee` extends `Person`, while `FullTimeEmployee` and `PartTimeEmployee` extend `Employee`.
+- **Abstraction:** The abstract `Employee` class defines common employee behaviour and an abstract `calculateSalary()` method.
+- **Polymorphism:** Overridden salary calculation methods are selected at runtime according to the actual employee object.
+- **Interfaces:** The `Payable` interface defines the common salary calculation contract.
+- **Method Overloading:** `searchEmployee()` supports different parameter lists.
+- **Constructor Overloading:** `Person` provides default and parameterized constructors.
+- **Method Overriding:** Both subclasses implement their own `calculateSalary()` method.
+- **`this` and `super`:** Used to refer to the current object and access parent-class constructors or methods.
+- **Static and Final Members:** Used for the employee counter, tax-rate constant, and final display method.
+- **Enum:** `Department` restricts department selection to predefined values.
+- **Arrays of Objects:** An `Employee` array stores full-time and part-time employee objects.
+- **Type Casting and String Methods:** Demonstrated during salary processing and employee ID searching.
+- **Control Flow and Packages:** Loops, conditional statements, jump statements, and custom packages organize the application's logic.
+
+## Project Structure
+
+```text
+Employee_Payroll_System/
+├── src/
+│   ├── main/
+│   │   └── PayrollApp.java
+│   ├── model/
+│   │   ├── Person.java
+│   │   ├── Employee.java
+│   │   ├── FullTimeEmployee.java
+│   │   ├── PartTimeEmployee.java
+│   │   ├── Department.java
+│   │   └── Payable.java
+│   └── service/
+│       └── PayrollService.java
+├── add_employees.png
+├── employee_search.png
+├── payroll_report.png
+├── README.md
+└── requirements.txt
+```
+
+## Requirements
+
+- Java JDK 17 or higher
+- Visual Studio Code or any Java-compatible IDE
+
+## How to Run
+
+Open a terminal in the project root directory.
+
+### 1. Compile the Java source files
+
+```powershell
+javac -d out src\model\*.java src\service\*.java src\main\*.java
+```
+
+### 2. Run the application
+
+```powershell
+java -cp out main.PayrollApp
+```
+
+After launching the program, follow the menu options and enter the requested employee details.
 
 Requirements
 Java JDK 17 or higher
@@ -115,3 +158,19 @@ After launching the program, follow the menu options and enter the requested emp
 
 Conclusion
 The Employee Payroll Management System demonstrates how Java OOP concepts can be combined to develop a simple and organized application. By separating employee models, payroll operations, and console interaction, the project provides a practical example of inheritance, abstraction, polymorphism, interfaces, and other Java features working together.
+
+## Sample Console Output
+
+The following screenshots demonstrate the working of the Employee Payroll Management System.
+
+### 1. Adding Employees
+
+![Adding Full-Time and Part-Time Employees](add_employees.png)
+
+### 2. Displaying and Searching Employees
+
+![Displaying and Searching Employees](employee_search.png)
+
+### 3. Generating Payroll
+
+![Payroll Report and Employee Count](payroll_report.png)
